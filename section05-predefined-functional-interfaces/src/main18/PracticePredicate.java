@@ -3,6 +3,7 @@ package main18;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class PracticePredicate {
 
@@ -34,11 +35,16 @@ public class PracticePredicate {
 		System.out.println(newList);
 		System.out.println(filteredList);
 		System.out.println(evens);
-		
-		
 	}
 
 	private static <T> List<T> filterList(List<T> list, Predicate<T> predicate) {
+		return list.stream()
+				.filter(predicate)
+				.collect(Collectors.toList());
+	}
+
+	@SuppressWarnings("unused")
+	private static <T> List<T> filterList2(List<T> list, Predicate<T> predicate) {
 		
 		List<T> newList = new ArrayList<>();
 		

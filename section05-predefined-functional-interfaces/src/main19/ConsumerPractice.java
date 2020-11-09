@@ -13,6 +13,7 @@ public class ConsumerPractice {
 		consumer.accept(56);
 		
 		printElements(list, consumer);
+		printElements2(list, consumer);
 	}
 
 	private static <T> void printElements(List<T> list, Consumer<T> consumer) {
@@ -21,4 +22,8 @@ public class ConsumerPractice {
 		}
 	}
 
+	private static <T> void printElements2(List<T> list, Consumer<T> consumer) {
+		list.forEach(consumer);
+	}
+ 
 }

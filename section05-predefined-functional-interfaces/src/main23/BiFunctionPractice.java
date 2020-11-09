@@ -8,6 +8,10 @@ public class BiFunctionPractice {
 		BiFunction<String, String, String> biFunction = (a, b) -> a + b;
 		
 		System.out.println(biFunction.apply("wordyourself", "app"));
+
+		BiFunction<String, String, Integer> biFunction2 = (a, b) -> (a + b).length();
+		
+		System.out.println(biFunction2.apply("wordyourself", "app"));
 	}
 	
 }
