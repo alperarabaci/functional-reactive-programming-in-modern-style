@@ -1,0 +1,2 @@
+module sc7 {
+}
