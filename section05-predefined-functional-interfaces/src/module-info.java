@@ -1,2 +1,2 @@
-module ch5 {
+module s05 {
 }

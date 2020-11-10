@@ -1,2 +1,2 @@
-module sc7 {
+module s07 {
 }
