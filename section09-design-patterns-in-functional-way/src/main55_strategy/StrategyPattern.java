@@ -16,20 +16,46 @@ public class StrategyPattern {
 		stockList.add(new Stock("AAPL", 318.65, 8));
 		stockList.add(new Stock("AMZ", 1866.74, 9));
 		
+		alternativeWay("Classic:");
+		
 		StockFilters.bySymbo(stockList, "AMZ").forEach(System.out::println);
 		
-		System.out.println("------------------------");
+		split();
 		
 		StockFilters.byPriceAbove(stockList, 300).forEach(System.out::println);
 		
-		System.out.println("Lambda:");
+		alternativeWay("Lambda:");
 		//symbol filter with lambda:
-		Predicate<Stock> predicateSymbol = (Stock s) -> s.getSymbol().equals("AMZ");  
-		StockFilters.filter(stockList, predicateSymbol).forEach(System.out::println);;
+		//Predicate<Stock> predicateSymbol = (Stock s) -> s.getSymbol().equals("AMZ");  
+		//JVM can understand type of s using definition of Predicate<Stock>. 
+		//So we can use "s" instead of "Stock s" 
+		Predicate<Stock> predicateSymbol = s -> s.getSymbol().equals("AMZ");
+		StockFilters.filter(stockList, predicateSymbol).forEach(System.out::println);
 		
-		System.out.println("------------------------");
+		split();
 		//price filter with lambda:
 		Predicate<Stock> predicatePrice = (Stock s) -> s.getPrice()>300;  
-		StockFilters.filter(stockList, predicatePrice).forEach(System.out::println);;
+		StockFilters.filter(stockList, predicatePrice).forEach(System.out::println);
+		
+		//stream alternative:		
+		alternativeWay("Stream:");
+		
+		stockList.stream()
+			.filter(s -> s.getSymbol().equals("AMZ"))
+			.forEach(System.out::println);
+		
+		split();
+		
+		stockList.stream()
+		.filter(s -> s.getPrice()>300)
+		.forEach(System.out::println);
+	}
+
+	private static void alternativeWay(String title) {
+		System.out.println(title);
+	}
+
+	private static void split() {
+		System.out.println("------------------------");
 	}
 }
