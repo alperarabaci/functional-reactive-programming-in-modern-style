@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import main62_strams_introduction.Book;
 
-public class NumericStreams {
+public class NumericStreamsDemo {
 
 	public static void main(String[] args) {
 		
@@ -37,6 +37,7 @@ public class NumericStreams {
 		
 		//
 		Stream<Integer> boxedInts = intStream.boxed();
+		
 		//
 		Stream<Object> streamm = doubleStream.mapToObj(val -> val);
 	}

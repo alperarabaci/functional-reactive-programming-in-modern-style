@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 import main62_strams_introduction.Book;
 
-public class Laziness {
+public class LazinessDemo {
 
 	/**
 	 * I increase books count in list. Streams method don't wait each other.
