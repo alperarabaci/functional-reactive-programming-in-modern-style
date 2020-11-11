@@ -1,4 +1,4 @@
-package main57_creating_fluent_interface;
+package main57_creating_fluent_interface.method_chaining;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,14 +17,16 @@ class Order{
 		this.address = address;
 	}
 
-	public void add(String item) {
+	public Order add(String item) {
 		cart.add(item);
 		System.out.println(item + " added to the cart");
+		return new Order(this.cart, this.address);
 	}
 
-	public void deliverAt(String location){
+	public Order deliverAt(String location){
 		this.address = location;
 		System.out.println("The delivery address set by you is '"+location+"'");
+		return new Order(this.cart, this.address);
 	}
 	
 	public void place() {
