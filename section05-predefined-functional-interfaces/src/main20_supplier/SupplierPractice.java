@@ -1,4 +1,4 @@
-package main20;
+package main20_supplier;
 
 import java.util.function.Supplier;
 

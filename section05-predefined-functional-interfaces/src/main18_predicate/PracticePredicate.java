@@ -1,4 +1,4 @@
-package main18;
+package main18_predicate;
 
 import java.util.ArrayList;
 import java.util.List;

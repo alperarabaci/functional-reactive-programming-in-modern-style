@@ -1,4 +1,4 @@
-package main19;
+package main19_consumer;
 
 import java.util.List;
 import java.util.function.Consumer;

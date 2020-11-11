@@ -1,4 +1,4 @@
-package main17;
+package main17_functional_generic;
 
 public interface FunctionalGenerics<T, R> {
 

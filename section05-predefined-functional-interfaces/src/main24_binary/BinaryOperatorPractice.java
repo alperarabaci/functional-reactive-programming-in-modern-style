@@ -1,4 +1,4 @@
-package main24;
+package main24_binary;
 
 import java.util.List;
 import java.util.function.BinaryOperator;
