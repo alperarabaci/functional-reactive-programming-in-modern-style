@@ -35,6 +35,16 @@ public class StreamIntroductionDemo {
 		
 		System.out.println("Streams:");
 		System.out.println(horrorBooks2);
+		
+		
+		
+		List<Book> horrorBooks3 = books.parallelStream()
+				.filter(book -> book.getGenre().equalsIgnoreCase("Horror"))
+				.filter(book -> book.getRating()>3.5)
+				.collect(Collectors.toList());
+		
+		System.out.println("Paralel Streams:");
+		System.out.println(horrorBooks3);
 	}
 
 }
