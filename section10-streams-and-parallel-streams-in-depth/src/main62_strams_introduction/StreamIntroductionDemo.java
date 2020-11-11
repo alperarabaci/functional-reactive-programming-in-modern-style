@@ -12,6 +12,7 @@ public class StreamIntroductionDemo {
 		books.add(new Book("book2", "author1", "Horror", 4.5));
 		books.add(new Book("book3", "author1", "Horror", 2.5));
 		books.add(new Book("book4", "author1", "Dystopian", 2.5));
+		books.add(new Book("book5", "author2", "Horror", 4.5));
 		
 		List<Book> horrorBooks = new ArrayList<>();
 		
@@ -44,7 +45,8 @@ public class StreamIntroductionDemo {
 				.collect(Collectors.toList());
 		
 		System.out.println("Paralel Streams:");
-		System.out.println(horrorBooks3);
+		//System.out.println(horrorBooks3);
+		horrorBooks3.forEach(System.out::println);
 	}
 
 }
