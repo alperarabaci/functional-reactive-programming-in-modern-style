@@ -16,6 +16,15 @@ public class Mobile {
 		this.processor = processor;
 		this.screenSize = screenSize;
 	}
+	
+	public Mobile(MobileBuilder builder) {
+		this.ram = builder.ram;
+		this.storage = builder.storage;
+		this.battery = builder.battery;
+		this.camera = builder.camera;
+		this.processor = builder.processor;
+		this.screenSize = builder.screenSize;
+	}
 
 	public int getRam() {
 		return ram;
