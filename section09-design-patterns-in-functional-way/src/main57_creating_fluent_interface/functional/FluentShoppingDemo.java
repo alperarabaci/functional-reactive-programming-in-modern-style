@@ -1,6 +1,6 @@
 package main57_creating_fluent_interface.functional;
 
-public class FluentShopping {
+public class FluentShoppingDemo {
 
 	public static void main(String[] args) {
 		/**

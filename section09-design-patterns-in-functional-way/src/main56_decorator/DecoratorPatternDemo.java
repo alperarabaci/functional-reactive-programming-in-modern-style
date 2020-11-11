@@ -1,6 +1,6 @@
 package main56_decorator;
 
-public class DecoratorPattern {
+public class DecoratorPatternDemo {
 
 	public static void main(String[] args) {
 		Burger myOrder = new BurgerShop(burger -> burger.addVeggies())

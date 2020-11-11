@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class StrategyPattern {
+public class StrategyPatternDemo {
 
 	public static void main(String[] args) {
 		List<Stock> stockList = new ArrayList<>();

@@ -1,6 +1,6 @@
 package main58_factory;
 
-public class FactoryMethodPattern {
+public class FactoryMethodPatternDemo {
 
 	public static void main(String[] args) {
 		
