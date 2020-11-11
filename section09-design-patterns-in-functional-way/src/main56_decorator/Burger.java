@@ -1,4 +1,4 @@
-package maini56_decorator;
+package main56_decorator;
 
 public class Burger {
 
