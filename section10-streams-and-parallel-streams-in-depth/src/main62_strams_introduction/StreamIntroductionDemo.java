@@ -25,8 +25,12 @@ public class StreamIntroductionDemo {
 		System.out.println("Classic:");
 		System.out.println(horrorBooks);
 		
+		/**
+		 * https://stackoverflow.com/questions/24054773/java-8-streams-multiple-filters-vs-complex-condition
+		 */
 		List<Book> horrorBooks2 = books.stream()
-				.filter(book -> book.getGenre().equalsIgnoreCase("Horror") && book.getRating()>3.5)
+				.filter(book -> book.getGenre().equalsIgnoreCase("Horror"))
+				.filter(book -> book.getRating()>3.5)
 				.collect(Collectors.toList());
 		
 		System.out.println("Streams:");
