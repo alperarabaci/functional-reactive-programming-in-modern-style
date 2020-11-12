@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collector;
 
-public class CustomCollector {
+public class CustomCollectorDemo1 {
 
 	public static void main(String[] args) {
 		
