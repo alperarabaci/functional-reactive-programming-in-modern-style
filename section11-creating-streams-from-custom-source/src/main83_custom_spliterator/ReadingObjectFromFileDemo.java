@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 
-public class ReadingObjectFromFile {
+public class ReadingObjectFromFileDemo {
 
 	public static void main(String[] args) {
 		Path p = Paths.get("./resource/books.txt");
