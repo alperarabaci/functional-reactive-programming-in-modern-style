@@ -5,7 +5,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -31,11 +30,12 @@ public class CollectorsInActionDemo {
 			Stream<Employee> stream = StreamSupport.stream(spliterator, false);
 			List<Employee> employees = stream.collect(Collectors.toList());
 			
+			//toList
 			List<String> names = employees.stream()
 					.map(employee -> employee.getName())
 			.collect(Collectors.toList());
 			
-
+			//toSet
 			Set<String> designations = employees.stream()
 					.map(e -> e.getDesignation())
 			.collect(Collectors.toSet());
@@ -45,20 +45,22 @@ public class CollectorsInActionDemo {
 			
 			System.out.println("designations:");
 			designations.forEach(System.out::println);
-			
+		
+			//toCollection
 			TreeSet<Employee> employeeSorted = employees.stream()
 			.collect(Collectors.toCollection(TreeSet<Employee>::new));
 			
 			System.out.println("sorted:");
 			employeeSorted.forEach(System.out::println);
 			
+			//toMap
 			Map<Integer, String> mapName = employees.stream()
 			.collect(Collectors.toMap(e -> e.getId(), e -> e.getName()));
 			
-			//partitioningBy
 			System.out.println("map:");
 			System.out.println(mapName);
 			
+			//partitioningBy
 			Map<Boolean, List<Employee>> collect = employees.stream()
 			.collect(Collectors.partitioningBy(e -> e.getGender() == 'M'));
 			
@@ -67,12 +69,14 @@ public class CollectorsInActionDemo {
 			System.out.println("Partition by Gender(!M)");
 			System.out.println(collect.get(false));
 			
-			
+			//groupingBy
 			Map<String, List<Employee>> collect2 = employees.stream()
 			.collect(Collectors.groupingBy(e -> e.getDesignation()));
 			
 			System.out.println("Map groupBy designation:");
 			System.out.println(collect2);
+			
+			
 			
 		} catch(IOException e1) {
 			e1.printStackTrace();
