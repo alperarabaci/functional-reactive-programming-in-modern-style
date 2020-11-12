@@ -1,6 +1,6 @@
 package main99_list;
 
-public class Movie {
+public class Movie implements Comparable<Movie> {
 	
 	private String name;
 	private int releaseYear;
@@ -41,6 +41,11 @@ public class Movie {
 	@Override
 	public String toString() {
 		return "Movie [name=" + name + ", releaseYear=" + releaseYear + ", industry=" + industry + "]";
+	}
+
+	@Override
+	public int compareTo(Movie o) {
+		return this.name.compareTo(o.getName());
 	}
 
 }
