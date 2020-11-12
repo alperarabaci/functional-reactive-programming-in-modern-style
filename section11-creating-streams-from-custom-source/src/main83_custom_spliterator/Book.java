@@ -2,12 +2,10 @@ package main83_custom_spliterator;
 
 class Book {
 	
-	
 	private String name;
 	private String author;
 	private String genre;
 	private double rating;
-	
 	
 	public Book(String name, String author, String genre, double rating) {
 		this.name = name;
