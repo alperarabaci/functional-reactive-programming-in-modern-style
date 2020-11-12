@@ -76,8 +76,12 @@ public class CollectorsInActionDemo {
 			System.out.println("Map groupBy designation:");
 			System.out.println(collect2);
 			
-			
-			
+			//joining
+			String employeeNamesConcatted = employees.stream()
+				.map(e -> e.getName())
+				.collect(Collectors.joining(", "));
+			System.out.println("Concatted employee names:");
+			System.out.println(employeeNamesConcatted);
 		} catch(IOException e1) {
 			e1.printStackTrace();
 		}
