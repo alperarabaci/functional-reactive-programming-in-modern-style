@@ -11,7 +11,7 @@ package main113_callback_hell;
  * @author alper
  *
  */
-public class CallBackDemo {
+public class CallBackDemo113 {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Main thread is running.");
@@ -19,7 +19,7 @@ public class CallBackDemo {
 		Runnable r = new Runnable() {
 			@Override
 			public void run() {
-				new CallBackDemo().runningAsyn(new CallBack() {
+				new CallBackDemo113().runningAsyn(new CallBack() {
 
 					@Override
 					public void call() {
