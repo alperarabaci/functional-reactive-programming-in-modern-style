@@ -1,4 +1,4 @@
-package com.trainint.l125;
+package com.trainint.l125_observable_observer;
 
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.ObservableEmitter;
@@ -7,7 +7,7 @@ import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.internal.operators.observable.ObservableCreate;
 
-public class ObservableAndObserver {
+public class ObservableAndObserverDemo {
 
 	public static void main(String[] args) {
 		ObservableCreate<Integer> source = new ObservableCreate<Integer>(new ObservableOnSubscribe<Integer>() {
