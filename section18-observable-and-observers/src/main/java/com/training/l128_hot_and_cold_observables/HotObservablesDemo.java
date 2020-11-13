@@ -1,4 +1,4 @@
-package com.trainint.l128_hot_and_cold_observables;
+package com.training.l128_hot_and_cold_observables;
 
 import java.util.concurrent.TimeUnit;
 

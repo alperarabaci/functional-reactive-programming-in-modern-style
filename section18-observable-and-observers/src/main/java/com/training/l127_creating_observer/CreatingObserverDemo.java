@@ -1,4 +1,4 @@
-package com.trainint.l127_creating_observer;
+package com.training.l127_creating_observer;
 
 import io.reactivex.rxjava3.core.Observable;
 

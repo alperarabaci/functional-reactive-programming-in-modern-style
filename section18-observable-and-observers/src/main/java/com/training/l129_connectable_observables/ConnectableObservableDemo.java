@@ -1,4 +1,4 @@
-package com.trainint.l129_connectable_observables;
+package com.training.l129_connectable_observables;
 
 import java.util.concurrent.TimeUnit;
 

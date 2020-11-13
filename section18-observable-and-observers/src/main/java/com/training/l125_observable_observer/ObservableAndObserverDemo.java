@@ -1,4 +1,4 @@
-package com.trainint.l125_observable_observer;
+package com.training.l125_observable_observer;
 
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.ObservableEmitter;

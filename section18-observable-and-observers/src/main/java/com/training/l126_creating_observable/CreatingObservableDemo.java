@@ -1,4 +1,4 @@
-package com.trainint.l126_creating_observable;
+package com.training.l126_creating_observable;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.trainint.l130_observable_variants;
+package com.training.l130_observable_variants;
 
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Completable;
