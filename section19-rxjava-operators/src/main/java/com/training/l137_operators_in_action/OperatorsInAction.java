@@ -1,4 +1,4 @@
-package com.training.l136_operators_in_action;
+package com.training.l137_operators_in_action;
 
 import java.util.List;
 
@@ -25,11 +25,19 @@ public class OperatorsInAction {
 		.sorted((e1, e2) -> Double.compare(e2.getRating(), e1.getRating()))
 		.map(e -> e.getName())
 		.take(4)
-		.toList()
+		//.toList()
+		.subscribe(System.out::println);
+		
+		obs
+		.filter(e-> e.getRating() < 4.0)
+		.sorted((e1, e2) -> Double.compare(e2.getRating(), e1.getRating()))
+		.map(e -> e.getName())
+		.toSortedList()
 		.subscribe(System.out::println);
 		
 		System.out.println("- scan:");
 		//cumulative total with scan
+		//takes accumulator function and apply to the first item and feeds result to next
 		List<Integer> expenses = List.of(200, 500, 300, 340, 129, 234, 999, 1030, 3400, 890, 996, 789);
 		Observable.fromIterable(expenses)
 		.scan((a,b) -> a + b)

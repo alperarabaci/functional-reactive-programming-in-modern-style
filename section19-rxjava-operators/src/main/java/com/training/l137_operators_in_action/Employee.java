@@ -1,4 +1,4 @@
-package com.training.l136_operators_in_action;
+package com.training.l137_operators_in_action;
 
 class Employee {
 
@@ -46,4 +46,8 @@ class Employee {
 		this.rating = rating;
 	}
 	
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", rating=" + rating + "]";
+	}
 }

@@ -14,6 +14,7 @@ public class HelloRxJava {
 			e.onNext("Hello");
 			e.onNext("RxJava");
 			e.onNext("World");
+			e.onComplete();
 		});
 		
 		source.subscribe(e -> System.out.println("Observer 1: " +e));

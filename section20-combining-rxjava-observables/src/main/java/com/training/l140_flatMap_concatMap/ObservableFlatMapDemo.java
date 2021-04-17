@@ -13,12 +13,14 @@ public class ObservableFlatMapDemo {
 		//flatMap
 		Observable.fromIterable(list)
 		.flatMap(e -> Observable.fromArray(e.split("")))
+		.toList()
 		.subscribe(System.out::println);
 		
 		System.out.println("- map");
 		//map
 		Observable.fromIterable(list)
 		.map(e -> e.length())
+		.toList()
 		.subscribe(System.out::println);
 	}
 	

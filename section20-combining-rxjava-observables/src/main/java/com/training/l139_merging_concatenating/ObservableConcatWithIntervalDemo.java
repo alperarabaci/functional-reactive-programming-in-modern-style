@@ -54,7 +54,7 @@ public class ObservableConcatWithIntervalDemo {
 		.concatArray(source1, source2, source3, source4, source5)
 		.subscribe(e -> System.out.println("Received:" + e));
 		
-		Thread.sleep(10000);
+		Thread.sleep(20000);
 	}
 
 }

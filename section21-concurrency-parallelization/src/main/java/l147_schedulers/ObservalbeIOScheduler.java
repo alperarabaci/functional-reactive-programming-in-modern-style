@@ -44,7 +44,7 @@ public class ObservalbeIOScheduler {
 		src.subscribe(e -> ioOperation(e, 1));
 		src.subscribe(e -> ioOperation(e, 2));
 		
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		src.subscribe(e -> ioOperation(e, 3));
 		src.subscribe(e -> ioOperation(e, 4));

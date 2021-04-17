@@ -41,7 +41,7 @@ public class ObservableNewThreadScheduler {
 		src.subscribe(e -> task(e, 1));
 		src.subscribe(e -> task(e, 2));
 		
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		src.subscribe(e -> task(e, 3));
 		src.subscribe(e -> task(e, 4));

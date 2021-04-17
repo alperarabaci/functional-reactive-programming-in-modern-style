@@ -14,7 +14,7 @@ public class ObservableCombineLatestDemo {
 		Observable.combineLatest(source1, source2, (e1, e2) -> "Source 1: " +e1 + " Source 2: " +e2)
 		.subscribe(System.out::println);
 		
-		Thread.sleep(20000);
+		Thread.sleep(10000);
 	}
 
 }

@@ -21,6 +21,7 @@ public class ObservableConcatMapDemo {
 		 */
 		Observable.fromIterable(list)
 		.concatMap(e -> Observable.fromArray(e.split("")))
+		.toList()
 		.subscribe(System.out::println);
 	}
 	
